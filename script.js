@@ -37,12 +37,7 @@ const _DICTIONARY = [
 //
 let reverse = 0;
 
-//
-let swap = function (x, y) {
-    let t = x;
-    x = y;
-    y = t;
-}
+
 
 //
 let translateText = function (original_value, dictionary_array) {
