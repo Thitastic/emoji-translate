@@ -118,11 +118,6 @@ _BTN_SWAP.addEventListener("click", function () {
 });
 
 _BTN_COPY.addEventListener("click", function () {
-    /* Select the text field */
-    let copyText = _TRANSLATE.value;
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-    /* Copy the text inside the text field */
-    document.execCommand("copy");
+    _TRANSLATE.select();
+    document.execCommand('copy');
 })
