@@ -1,0 +1,14 @@
+.main{
+    padding: 50px;
+}
+
+.input-group{
+    margin: 10px 0;
+}
+textarea{
+    resize: none !important;
+}
+
+.actions{
+    text-align: center;
+}
