@@ -83,7 +83,10 @@ let translateText = function (original_value, dictionary_array) {
 }
 
 let translateEmo = function (original_value, dictionary_array) {
+    console.log();
     original_value = original_value.replaceAll('☺️', 'h');
+    original_value = original_value.replaceAll('☹️', 't');
+    console.log(original_value);
     let original_text = original_value.split(/.*?/u);
     let output = "";
     for (let i = 0; i < original_text.length; i++) {
@@ -91,6 +94,8 @@ let translateEmo = function (original_value, dictionary_array) {
             output += ' ';
         } else if (original_text[i] == 'h') {
             output += 'h';
+        } else if(original_text[i] == 't'){
+            output += 't';
         }
         else {
             dictionary_array.forEach(word => {
