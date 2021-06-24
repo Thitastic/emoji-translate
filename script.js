@@ -4,6 +4,7 @@ const _TRANSLATE = document.getElementById("translated-text");
 const _BTN_TRANSLATE = document.getElementById("btn-translate");
 const _BTN_SWAP = document.getElementById("btn-swap");
 const _BTN_COPY = document.getElementById("btn-copy");
+const _BTN_CLEAR = document.getElementById("btn-clear");
 
 //
 const _DICTIONARY = [
@@ -142,6 +143,11 @@ _BTN_COPY.addEventListener("click", function () {
     _TRANSLATE.select();
     document.execCommand('copy');
     showToast();
+});
+
+_BTN_CLEAR.addEventListener("click", function(){
+    _ORIGINAL.value = "";
+    _TRANSLATE.value = "";
 })
 
 
