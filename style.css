@@ -1,3 +1,12 @@
+@media only screen and (max-width: 600px) {
+    .main{
+        padding: 0 !important;
+    }
+    #myToast{
+        left: 5% !important;
+    }
+  }
+
 .main{
     padding: 50px;
 }
@@ -11,4 +20,11 @@ textarea{
 
 .actions{
     text-align: center;
+}
+
+#myToast{
+    position: fixed;
+    bottom: 5%;
+    left: 1%;
+    z-index: 999;
 }

@@ -90,9 +90,8 @@ let translateText = function (original_value, dictionary_array) {
 }
 
 let translateEmo = function (original_value, dictionary_array) {
-    original_value = original_value.replace('☺️', 'h');
+    original_value = original_value.replaceAll('☺️', 'h');
     let original_text = original_value.split(/.*?/u);
-    console.log(original_value);
     let output = "";
     for (let i = 0; i < original_text.length; i++) {
         if (original_text[i] === ' ') {
@@ -135,7 +134,6 @@ _BTN_SWAP.addEventListener("click", function () {
         reverse = 0;
         document.getElementById("ori-hint").textContent = "Abc";
         document.getElementById("trans-hint").textContent = "😀";
-        swap(_TRANSLATE.value, _ORIGINAL.value);
         let t = _ORIGINAL.value;
         _ORIGINAL.value = _TRANSLATE.value;
         _TRANSLATE.value = t;
@@ -145,4 +143,18 @@ _BTN_SWAP.addEventListener("click", function () {
 _BTN_COPY.addEventListener("click", function () {
     _TRANSLATE.select();
     document.execCommand('copy');
+    showToast();
 })
+
+
+//b5 toast
+let option = {
+    animation: true,
+    delay: 2000,
+}
+
+let showToast= function(){
+    const _TOAST = document.getElementById("myToast");
+    let toastElement = new bootstrap.Toast(_TOAST, option);
+    toastElement.show();
+}
